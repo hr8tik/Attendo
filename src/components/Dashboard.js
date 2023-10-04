@@ -3,7 +3,7 @@ import { AuthContext } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import { auth } from '../firebase';
-
+import Timer from './Timer';
 
 function Dashboard() {
     const navigate = useNavigate();
@@ -13,7 +13,7 @@ function Dashboard() {
      }
   return (
     <>
-    <div>Welcome to dashboard</div>
+    <Timer/>
     <Button onClick={()=>auth.signOut()}>
         SignOut
     </Button>
